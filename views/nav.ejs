@@ -1,0 +1,167 @@
+<style>
+    .nav_area {
+        width: 100%;
+        min-width: 1000px;
+        height: 95px;
+    }
+
+    .nav_blue_box {
+        width: 100%;
+        height: 55px;
+        min-width: 1000px;
+        background-color: #39373A;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .nav_box {
+        width: 1000px;
+        min-width: 1000px;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .nav_top_box {
+        width: 100%;
+        height: 55px;
+        background-color: #2565D0;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .nav_box_left {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .nav_box_right {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .nav_logo_dn {
+        font-family: "Helvetica Neue", "Apple SD Gothic Neo", "Malgun Gothic", "맑은 고딕", Dotum, "돋움", sans-serif;
+        font-weight: 700;
+        font-size: 20px;
+        margin-right: 5px;
+        text-decoration: none;
+        color: white;
+    }
+
+    .nav_logo_sports {
+        font-family: "Helvetica Neue", "Apple SD Gothic Neo", "Malgun Gothic", "맑은 고딕", Dotum, "돋움", sans-serif;
+        font-weight: 700;
+        font-size: 25px;
+        margin-right: 27.3333px;
+        text-decoration: none;
+        color: white;
+    }
+
+    .nav_sign_up {
+        font: inherit;
+        font-weight: 500;
+        font-size: 18px;
+        margin-left: 27.3333px;
+        text-decoration: none;
+        color: white;
+    }
+
+    .nav_white_box {
+        width: 100%;
+        height: 40px;
+        border-top: 1px solid #DFE3EC;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .nav_bottom_box {
+        width: 1000px;
+        min-width: 1000px;
+        height: 40px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .nav_menu_new {
+        font-family: "Helvetica Neue", "Apple SD Gothic Neo", "Malgun Gothic", "맑은 고딕", Dotum, "돋움", sans-serif;
+        font-size: 13px;
+        font-weight: 700;
+        color: #777;
+        margin-right: 27.3333px;
+        text-decoration: none;
+    }
+
+    .nav_menu_new:hover {
+        color: black;
+        -webkit-transition: color 0.5s;
+        transition: color 0.5s;
+    }
+
+    .nav_bottom_black {
+        width: 100%;
+        height: 13px;
+        background-color: #EFF2F8;
+        border-top: #DFE3EC;
+        border-bottom: #DFE3EC;
+    }
+</style>
+
+<div class="nav_area">
+    <div class="nav_blue_box">
+        <div class="nav_box">
+            <div class="nav_box_left">
+                <a class="nav_logo_dn" href="/">D.Net</a>
+                <a class="nav_logo_sports" href="/">SPORTS</a>
+            </div>
+            <div class="nav_box_right">
+                <% if(sess.user) {%>
+                    <% if (sess.user.type == '사용자') {%>
+                        <a class="nav_sign_up" href="/login">마이페이지</a>
+                        <a class="nav_sign_up" href="/logout">로그아웃</a>
+                    <%}%>
+                    <% if (sess.user.type == '관리자') {%>
+                        <a class="nav_sign_up" href="/board/upload_video">동영상작성</a>
+                        <a class="nav_sign_up" href="/board/upload_news">기사작성</a>
+                        <a class="nav_sign_up" href="/login">마이페이지</a>
+                        <a class="nav_sign_up" href="/logout">로그아웃</a>
+                    <%}%>
+                <%} else {%>
+                    <% if(url == '/login') {%>
+                        <a class="nav_sign_up" href="/sign_up">회원가입</a>
+                    <%} else {%>
+                        <a class="nav_sign_up" href="/sign_up">회원가입</a>
+                        <a class="nav_sign_up" href="/login">로그인</a>
+                    <%}%>
+                <%}%>
+            </div>
+        </div>
+    </div>
+    <div class="nav_white_box">
+        <div class="nav_bottom_box">
+            <a class="nav_menu_new" href="/board/hot_news">최신뉴스</a>
+            <a class="nav_menu_new" href="/board/hot_video">영상</a>
+            <a class="nav_menu_new" href="/board/record_premier">일정/결과</a>
+            <a class="nav_menu_new" href="/">기록/순위</a>
+        </div>
+    </div>
+    <div class="nav_bottom_black"></div>
+</div>

@@ -1,0 +1,441 @@
+<style>
+    .news_area {
+        margin-top: 35px;
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .news_box {
+        width: 1000px;
+        min-width: 1000px;
+        height: auto;
+        min-height: 300px;
+        display: flex;
+    }
+
+    .news_box_left {
+        width: 700px;
+        min-width: 700px;
+        height: auto;
+        min-height: 300px;
+    }
+
+    .news_box_right {
+        width: 260px;
+        min-width: 300px;
+        height: auto;
+        min-height: 1800px;
+        border: 1px solid #e8e8e8;
+        padding-top: 30px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .news_box_left_content_box {
+        width: 660px;
+        height: 100%;
+    }
+
+    .news_box_left_content_box_title {
+        width: 100%;
+        height: 160px;
+        border-bottom: 1px solid #E8E8E8;
+    }
+
+    .news_box_left_content_box_title_logo {
+        margin-top: 10px;
+        padding-left: 10px;
+        height: 30px;
+        width: auto;
+    }
+
+    .news_box_left_content_box_title_text {
+        padding-left: 15px;
+        margin: 0px;
+        margin-top: 5px;
+        font-size: 25px;
+    }
+
+    .news_box_left_content_box_title_time {
+        margin: 0px;
+        margin-top: 10px;
+        padding-left: 10px;
+        color: #39373A;
+        font-family: 'Noto-B';
+        font-size: 12px;
+        font-weight: 300;
+    }
+
+    .news_box_left_content_box_img_box {
+        margin-top: 20px;
+        width: 660px;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .news_box_left_content_box_img {
+        width: 600px;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .news_box_left_content_text_box {
+        width: 660px;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin-bottom: 60px;
+    }
+
+    .reply_area {
+        width: 660px;
+        height: auto;
+        border-top: 1px solid #E8E8E8;
+    }
+
+    .news_box_left_content_box_img_content {
+        width: 100%;
+        height: auto;
+    }
+
+    .news_box_right_head_text {
+        color: black;
+        font-family: 'Noto-B';
+        font-size: 16px;
+        font-weight: 700;
+        margin-right: 90px;
+    }
+
+    .news_box_more {
+        color: #999;
+        font-family: 'Noto-B';
+        font-size: 14px;
+        text-decoration: none;
+    }
+
+    .right_more_news_box {
+        width: 100%;
+        height: auto;
+        min-height: 100px;
+        margin-top: 30px;
+        border-bottom: 1px solid #EFF2F8;
+        padding-bottom: 30px;
+        margin-bottom: 30px;
+    }
+
+    .right_more_news_content {
+        width: 100%;
+        height: 20px;
+        margin-bottom: 5px;
+        font-size: 14px;
+        text-decoration: none;
+    }
+
+    .right_more_news_content_text {
+        text-decoration: none;
+        color: black;
+    }
+
+    .best_video_top_img_box {
+        margin-top: 10px;
+        width: 100%;
+        height: 156px;
+        overflow: hidden;
+        margin-bottom: -156px;
+    }
+
+    .best_video_top_img {
+        width: 100%;
+        height: auto;
+    }
+
+    .best_video_top_text_box {
+        width: calc(100%-10px);
+        padding-left: 10px;
+        height: 151px;
+        padding-top: 5px;
+        color: white;
+        margin-bottom: 10px;
+    }
+
+    .best_video_top_text_box_number {
+        width: 100%;
+        margin-bottom: 95px;
+        font-size: 20px;
+    }
+
+    .best_video_top_box_link {
+        text-decoration: none;
+        color: white;
+    }
+
+    .best_video_top_box_link:hover {
+        text-decoration: underline;
+    }
+
+    .best_video_top_text_box_title {
+        margin-bottom: 10px;
+    }
+
+    .best_video_content_box {
+        width: 100%;
+        height: 64px;
+        margin-bottom: 10px;
+        text-decoration: none;
+        color: black;
+    }
+
+    .best_video_content_box {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .best_video_content_img_box {
+        width: 115px;
+        height: 100%;
+        overflow: hidden;
+        margin-right: 10px;
+    }
+
+    .best_video_content_img {
+        width: 100%;
+        height: auto;
+    }
+
+    .best_video_content_text_box {
+        width: 175px;
+        height: 34px;
+        margin-top: -27px;
+    }
+    .link_non{
+        text-decoration: none;
+    }
+    .link_non:hover{
+        text-decoration: underline;
+    }
+    .reply_head_box{
+        width: 100%;
+        height: 40px;
+        margin-top: 50px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        margin-bottom:  10px;
+    }
+    .reply_count_text{
+        margin: 0px;
+        font-size: 20px;
+        font-weight: 500;
+    }
+    .reply_input_box{
+        width: 100%;
+        height: 50px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .reply_content_input_box{
+        width: calc(100% - 140px);
+        height: 48px;
+        padding-left: 15px;
+        padding-right: 15px;
+        border: 1px solid #b3b3b3;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        font-size: 18px;
+        margin-right: 10px;
+        margin-bottom: 20px;
+        
+    }
+    .reply_content_input_box:active{
+        border: 1px solid #b3b3b3;
+    }
+    .reply_content_input_box::placeholder{
+        font-size: 18px;
+    }
+    .reply_content_input_button{
+        width: 100px;
+        height: 52px;
+        border: 1px solid #39373A;
+        background-color: #39373A;
+        border-radius: 5px;
+        color: white;
+        font-size: 18px;
+    }
+    .reply_content_box{
+        width: 100%;
+        height: 70px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        border-bottom: 1px solid #E8E8E8;;
+    }
+    .reply_content_head{
+        width: 100%;
+        height: 26px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        font-size: 18px;
+        font-weight: 700;
+    }
+    .reply_content_content{
+        width: 100%;
+        height: 26px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        font-size: 16px;
+        font-weight: 500;
+    }
+    .best_box{
+        width: 35px;
+        height: 18px;
+        background-color: red;
+        color: white;
+        text-align: center;
+        margin-right: 5px;
+    }
+    .reply_content_date{
+        width: 100%;
+        height: 26px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        font-size: 14px;
+        font-weight: 300;
+    }
+    .reply_content_head_img{
+        height: 100%;
+        width: auto;
+        margin-right: 5px;
+    }
+</style>
+
+<div class="news_area">
+    <div class="news_box">
+        <div class="news_box_left">
+            <div class="news_box_left_content_box">
+                <div class="news_box_left_content_box_title">
+                    <img src="https://keyassets.timeincuk.net/inspirewp/live/wp-content/uploads/sites/4/2015/11/World-Soccer-masthead-white-background-x-240.jpg?v=845274348486128803"
+                        alt="" class="news_box_left_content_box_title_logo">
+                    <h1 class="news_box_left_content_box_title_text"><%=row[0].title%></h1>
+                    <h5 class="news_box_left_content_box_title_time">기사입력 <%=row[0].upload_time%> | 최종수정
+                        <%=row[0].update_time%></h5>
+                </div>
+                <div class="news_box_left_content_box_img_box">
+                    <div class="news_box_left_content_box_img">
+                        <img class="news_box_left_content_box_img_content" src="../../uploads/<%=row[0].img%>">
+                    </div>
+                </div>
+                <div class="news_box_left_content_text_box" style="white-space: pre-line;">
+                    <%=row[0].content%>
+                </div>
+                <div class="reply_area">
+                    <div class="reply_head_box">
+                        <h5 class="reply_count_text">댓글&nbsp;&nbsp;</h5>
+                        <h5 class="reply_count_text"> count_number</h5>
+                    </div>
+                    <div class="reply_input_box">
+                        <%if (sess.user) {%>
+                            <form method="POST" action="/board/input_news_reply/<%=row[0].content_number%>" style="width: 100%; display: flex;">
+                                <input type="text" name="content" class="reply_content_input_box" placeholder="ㅎㅇ">
+                                <button class="reply_content_input_button">댓글 작성</button>
+                            </form>
+                        <%} else {%>
+                            <div class="reply_content_input_box">로그인이 필요합니다</div>
+                        <%}%>
+                    </div>
+                    <% for (var reply_count = 0; reply_count < reply.length; reply_count++){ %>
+                    <div class="reply_content_box">
+                        <div class="reply_content_head">
+                            <img src="https://cdn.onlinewebfonts.com/svg/img_548469.png" class="reply_content_head_img" alt=""><%=reply[reply_count].name%>
+                        </div>
+                        <div class="reply_content_content">
+                            <div class="best_box">best</div><%=reply[reply_count].content%>
+                        </div>
+                        <div class="reply_content_date">
+                            <%=reply[reply_count].upload_time%>
+                        </div>
+                    </div>
+                    <%}%>
+                </div>
+            </div>
+        </div>
+        <div class="news_box_right">
+            <span class="news_box_right_head_text">이 시각 많이 본 뉴스</span>
+            <a class="news_box_more" href="/board/hot_news">더 보기 ></a>
+            <div class="right_more_news_box">
+                <% for (var i = 0; i < 10; i++){%>
+                <% if (best_news[i].title.length > 25) {%>
+                <div class="right_more_news_content">
+                    <a class="right_more_news_content_text" href="/board/news/<%=best_news[i].content_number%>"><%= best_news[i].title.slice(0,25)%>...</a>
+                </div>
+                <%} else {%>
+                <div class="right_more_news_content">
+                    <a class="right_more_news_content_text" href="/board/news/<%=best_news[i].content_number%>"><%= best_news[i].title.slice(0,25)%></a>
+                </div>
+                <%}%>
+                <%}%>
+            </div>
+            <span class="news_box_right_head_text" style="margin-right: 145px;">많이 본 영상</span>
+            <a class="news_box_more" href="/board/hot_news">더 보기 ></a>
+            <a class="best_video_top_box_link" href=" /board/video/<%=best_video[0].video_number%>">
+                <div class="best_video_top_img_box">
+                    <img class="best_video_top_img" src="../../uploads/<%=best_video[0].thumbnail%>" alt="">
+                </div>
+                <div class="best_video_top_text_box">
+                    <div class="best_video_top_text_box_number">
+                    </div>
+                    <div class="best_video_top_text_box_title">
+                        <% if(best_video[0].title.length > 25) {%>
+                        <span><%=best_video[0].title.slice(0,30)%>...</span>
+                        <%} else {%>
+                        <span><%=best_video[0].title%>...</span>
+                        <%}%>
+                    </div>
+                    ▷ <%=best_video[0].hit%>
+                    </div>
+            </a>
+            <% for (var j = 1; j < 5 ; j++){%>
+            <a class="link_non" href="/board/video/<%=best_video[j].video_number%>">
+            <div class="best_video_content_box">
+                <div class="best_video_content_img_box">
+                    <img class="best_video_content_img" src="../../uploads/<%=best_video[j].thumbnail%>">
+                </div>
+                <div class="best_video_content_text_box">
+                    <div class="best_video_content_text_head">
+                        <%=best_video[j].title.slice(0,25)%>...
+                    </div>
+                    <div>
+                        ▷ <%=best_video[j].hit%>
+                    </div>
+                </div>
+            </div>
+            </a>
+            <%}%>
+            <div class="best_video_top_text_box_text">
+            </div>
+        </div>
+    </div>
+</div>

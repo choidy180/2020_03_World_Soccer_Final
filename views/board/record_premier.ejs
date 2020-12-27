@@ -1,0 +1,311 @@
+<style>
+    .rank_area{
+        width: 100%;
+        height: auto;
+        min-height: 300px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    .rank_box{
+        width: 1000px;
+        height: auto;
+        min-height: 100px;
+    }
+    .choice_team_individual{
+        width: 100%;
+        height: 75px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        font-size: 16px;
+        font-weight: bold;
+    }
+    .choice_team_individual_link_first{
+        height: 20px;
+        text-decoration: none;
+        color: #777;
+        padding-right: 15px;
+    }
+    .choice_team_individual_link_second{
+        height: 20px;
+        text-decoration: none;
+        color: #777;
+        padding-left: 15px;
+    }
+    .choice_team_individual_link_middle{
+        width: 0px;
+        height: 14px;
+        border: 1px solid #777;
+        margin-top: 3px;
+    }
+    .record_tab{
+        width: 100%;
+        height: 54px;
+        margin-bottom: 48px;
+        border: 1px solid #b4b5c0;
+        border-top: 3px solid #3f4550;
+        display: flex;
+    }
+    .record_tab_box{
+        width: 200px;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        background-color: #F7F7F9;
+    }
+    .record_tab_box_link{
+        width: 100%;
+        height: auto;
+        border-right: 1px solid black;
+        text-align: center;
+        text-decoration: none;
+        color: #3f4044;
+        font-size: 15px;
+        font-weight: bold;
+        letter-spacing: -1px;
+        vertical-align: middle;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    .record_head{
+        width: 100%;
+        height: 36px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        padding-bottom: 13px;
+        font-size: 18px;
+        font-weight: bold;
+        letter-spacing: -1px;
+        vertical-align: middle;
+    }
+    .record_age{
+        color: #3366CC
+    }
+    .record_rank_bar{
+        width: 100%;
+        height: 41px;
+        display: flex;
+        border-top: 1px solid #777784;
+        border-bottom: 1px solid #E0E0E1;
+        border-left: 1px solid #E0E0E0;
+        border-right: 1px solid #E0E0E0;
+        background-color: #F7F7F9;
+    }
+    .record_rank_bar_rank{
+        width: 44.67px;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        font-size: 11px;
+        color: #3f4550;
+        letter-spacing: -1px;
+        font-weight: bold;
+    }
+    .record_rank_bar_team{
+        width: 294.67px;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        font-size: 11px;
+        color: #3f4550;
+        letter-spacing: -1px;
+        font-weight: bold;
+        padding-left: 20px;
+    }
+    .record_rank_bar_count_teams{
+        width: 80px;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        font-size: 11px;
+        color: #3f4550;
+        letter-spacing: -1px;
+        font-weight: bold;
+    }
+    #premier{
+        background-color: white;
+    }
+    #premier_text{
+        color: #3f75da;
+    }
+    .record_rank_bar_content{
+        width: 100%;
+        height: 31px;
+        display: flex;
+        border-bottom: 1px solid #E0E0E1;
+        border-left: 1px solid #E0E0E0;
+        border-right: 1px solid #E0E0E0;
+        background-color: white;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .entry_into_box{
+        width: 5px;
+        height: 100%;
+    }
+    .rank_display_box{
+        width: 39.67px;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    .team_display_box{
+        width: 299.67px;
+        padding-left: 15px;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .rank_team_name{
+        font-size: 14px;
+        font-family: "돋움",Dotum,Helvetica,sans-serif;
+    }
+    .rank_display_other_box{
+        width: 80px;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        font-family: tahoma,'돋움',Dotum,sans-serif;
+        font-size: 13px;
+    }
+</style>
+<div class="rank_area">
+    <div class="rank_box">
+        <div class="choice_team_individual">
+            <a class="choice_team_individual_link_first" href="">팀 순위</a>
+            <div class="choice_team_individual_link_middle"></div>
+            <a class="choice_team_individual_link_second" href="">개인 순위</a>
+        </div>
+        <div class="record_tab">
+            <div id="premier" class="record_tab_box">
+                <a class="record_tab_box_link" href="/board/record_premier"><img src="https://imgsports.pstatic.net/images/2020/pc/common/league/epl_on.png">&nbsp;<span id="premier_text">프리미어리그</span></a>
+            </div>
+            <div class="record_tab_box">
+                <a class="record_tab_box_link" href="/board/record_laliga"><img src="https://imgsports.pstatic.net/images/2020/pc/common/league/primera.png">&nbsp;라리가</a>
+            </div>
+            <div class="record_tab_box">
+                <a class="record_tab_box_link" href="/board/record_bundes"><img src="https://imgsports.pstatic.net/images/2020/pc/common/league/bundesliga.png">&nbsp;분데스리가</a>
+            </div>
+            <div class="record_tab_box">
+                <a class="record_tab_box_link" href="/board/record_seria"><img src="https://imgsports.pstatic.net/images/2020/pc/common/league/seria.png">&nbsp;세리에 A</a>
+            </div>
+            <div class="record_tab_box">
+                <a class="record_tab_box_link" style="border-right: none;" href="/board/record_league_1"><img src="https://imgsports.pstatic.net/images/2020/pc/common/league/ligue1.png">&nbsp;리그 1</a>
+            </div>
+        </div>
+        <div class="record_head">
+            <div class="record_age">2019/20 시즌 </div>&nbsp;&nbsp;팀 순위
+        </div>
+        <div class="record_rank_bar">
+            <div class="record_rank_bar_rank">순위</div>
+            <div class="record_rank_bar_team">팀</div>
+            <div class="record_rank_bar_count_teams">경기수</div>
+            <div class="record_rank_bar_count_teams">승점</div>
+            <div class="record_rank_bar_count_teams">승</div>
+            <div class="record_rank_bar_count_teams">무</div>
+            <div class="record_rank_bar_count_teams">패</div>
+            <div class="record_rank_bar_count_teams">득점</div>
+            <div class="record_rank_bar_count_teams">실점</div>
+            <div class="record_rank_bar_count_teams">득실차</div>
+        </div>
+        <% for (var i = 0; i < 4; i ++) { %>
+        <div class="record_rank_bar_content">
+            <div class="entry_into_box" style="background-color: #6F8DD9;"></div>
+            
+                <div class="rank_display_box" style="color:#6F8DD9;"><%=i+1%></div>     
+            <div class="team_display_box">
+                <img style="margin-right: 10px;" src="../../uploads/logo_premier/<%=row[i].logo%>.png" alt="">
+                <span class="rank_team_name"><%=row[i].name%> FC</span>
+            </div>
+            <div class="rank_display_other_box"><%=row[i].win + row[0].draw + row[i].defeat%></div>
+            <div class="rank_display_other_box" style="font-weight: 700;"><%=row[i].win * 3 + row[i].draw * 1%> </div>
+            <div class="rank_display_other_box"><%=row[i].win%></div>
+            <div class="rank_display_other_box"><%=row[i].draw%></div>
+            <div class="rank_display_other_box"><%=row[i].defeat%></div>
+            <div class="rank_display_other_box"><%=row[i].score%></div>
+            <div class="rank_display_other_box"><%=row[i].loss%></div>
+            <div class="rank_display_other_box"><%=row[i].score - row[i].loss%></div>
+        </div>
+        <%}%>
+        <% for (var i = 4; i < 6; i ++) { %>
+            <div class="record_rank_bar_content">
+                <div class="entry_into_box" style="background-color: #80d882;"></div>
+                
+                    <div class="rank_display_box"><%=i+1%></div>     
+                <div class="team_display_box">
+                    <img style="margin-right: 10px;" src="../../uploads/logo_premier/<%=row[i].logo%>.png" alt="">
+                    <span class="rank_team_name"><%=row[i].name%> FC</span>
+                </div>
+                <div class="rank_display_other_box"><%=row[i].win + row[0].draw + row[i].defeat%></div>
+                <div class="rank_display_other_box" style="font-weight: 700;"><%=row[i].win * 3 + row[i].draw * 1%> </div>
+                <div class="rank_display_other_box"><%=row[i].win%></div>
+                <div class="rank_display_other_box"><%=row[i].draw%></div>
+                <div class="rank_display_other_box"><%=row[i].defeat%></div>
+                <div class="rank_display_other_box"><%=row[i].score%></div>
+                <div class="rank_display_other_box"><%=row[i].loss%></div>
+                <div class="rank_display_other_box"><%=row[i].score - row[i].loss%></div>
+            </div>
+        <%}%>
+        <% for (var i = 6; i < 17; i ++) { %>
+            <div class="record_rank_bar_content">
+                <div class="entry_into_box" style="background-color: white;"></div>
+                
+                    <div class="rank_display_box"><%=i+1%></div>     
+                <div class="team_display_box">
+                    <img style="margin-right: 10px;" src="../../uploads/logo_premier/<%=row[i].logo%>.png" alt="">
+                    <span class="rank_team_name"><%=row[i].name%> FC</span>
+                </div>
+                <div class="rank_display_other_box"><%=row[i].win + row[0].draw + row[i].defeat%></div>
+                <div class="rank_display_other_box" style="font-weight: 700;"><%=row[i].win * 3 + row[i].draw * 1%> </div>
+                <div class="rank_display_other_box"><%=row[i].win%></div>
+                <div class="rank_display_other_box"><%=row[i].draw%></div>
+                <div class="rank_display_other_box"><%=row[i].defeat%></div>
+                <div class="rank_display_other_box"><%=row[i].score%></div>
+                <div class="rank_display_other_box"><%=row[i].loss%></div>
+                <div class="rank_display_other_box"><%=row[i].score - row[i].loss%></div>
+            </div>
+        <%}%>
+        <% for (var i = 17; i < 20; i ++) { %>
+            <div class="record_rank_bar_content">
+                <div class="entry_into_box" style="background-color: #C0C0C0;"></div>
+                
+                    <div class="rank_display_box"><%=i+1%></div>     
+                <div class="team_display_box">
+                    <img style="margin-right: 10px;" src="../../uploads/logo_premier/<%=row[i].logo%>.png" alt="">
+                    <span class="rank_team_name"><%=row[i].name%> FC</span>
+                </div>
+                <div class="rank_display_other_box"><%=row[i].win + row[0].draw + row[i].defeat%></div>
+                <div class="rank_display_other_box" style="font-weight: 700;"><%=row[i].win * 3 + row[i].draw * 1%> </div>
+                <div class="rank_display_other_box"><%=row[i].win%></div>
+                <div class="rank_display_other_box"><%=row[i].draw%></div>
+                <div class="rank_display_other_box"><%=row[i].defeat%></div>
+                <div class="rank_display_other_box"><%=row[i].score%></div>
+                <div class="rank_display_other_box"><%=row[i].loss%></div>
+                <div class="rank_display_other_box"><%=row[i].score - row[i].loss%></div>
+            </div>
+        <%}%>
+    </div>
+</div>

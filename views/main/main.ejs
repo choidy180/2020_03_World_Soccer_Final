@@ -1,0 +1,780 @@
+<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+<style>
+    .main_area {
+        margin-top: 15px;
+        width: 100%;
+        min-width: 1000px;
+        height: auto;
+        min-height: 300px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .main_box {
+        width: 1000px;
+        min-width: 1000px;
+        height: auto;
+    }
+
+    .main_top_area {
+        width: 100%;
+        height: 340px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .main_top_box {
+        padding-top: 10px;
+        width: 100%;
+        height: 313px;
+        display: flex;
+    }
+
+    .main_top_box_left {
+        width: 700px;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .main_top_box_right {
+        width: 300px;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .main_top_box_left_content_area {
+        width: 675px;
+        height: auto;
+    }
+
+    .main_top_box_left_content_area_top_area {
+        width: 100%;
+        height: 108px;
+        border-bottom: 1px solid #dfe3ec;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .main_top_box_left_content_area_middle_area {
+        width: 100%;
+        height: 70px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        border-bottom: 1px solid #dfe3ec;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .main_top_box_left_content_area_bottom_area {
+        width: 100%;
+        height: 70px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        border-bottom: 1px solid #dfe3ec;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .main_top_box_right_content_box {
+        width: 330px;
+        height: 301.95px;
+        border-left: 1px solid #dfe3ec;
+        padding-left: 15px;
+    }
+
+    .main_middle_area {
+        width: 100%;
+        height: auto;
+        min-width: 1000px;
+        min-height: 100px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .main_middle_box {
+        width: 1000px;
+        height: auto;
+        min-height: 220px;
+        border-top: 2px solid #80b8f3;
+        margin-bottom: 30px;
+    }
+
+    .main_middle_box_video_nav {
+        width: 100%;
+        height: 50px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .main_middle_box_video_box {
+        width: 100%;
+        height: 100%;
+        min-height: 170px;
+    }
+
+    .main_bottom_area {
+        width: 100%;
+        min-width: 1000px;
+        height: auto;
+        min-height: 300px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .main_bottom_box {
+        width: 1000px;
+        min-width: 1000px;
+        height: auto;
+        min-height: 300px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .main_bottom_left {
+        width: 320px;
+        min-width: 320px;
+        height: auto;
+        min-height: 500px;
+        margin-right: 18px;
+    }
+
+    .main_bottom_center {
+        width: 320px;
+        min-width: 320px;
+        height: auto;
+        min-height: 786px;
+        margin-right: 18px;
+        border-top: 1px solid #225dcb;
+
+    }
+
+    .main_bottom_right {
+        width: 320px;
+        min-width: 320px;
+        height: auto;
+        min-height: 786px;
+        border: 1px solid blue;
+    }
+
+    .main_bottom_left_plan {
+        width: 100%;
+        height: 195px;
+        border: 1px solid #F1F1F1;
+        border-top: 1px solid #225DCB;
+        border-bottom: 1px solid #ddd;
+        margin-bottom: 15px;
+    }
+
+    .main_bottom_left_opinion {
+        width: 100%;
+        height: 260px;
+        border: 1px solid #F1F1F1;
+        border-top: 1px solid #225DCB;
+        border-bottom: 1px solid #ddd;
+        margin-bottom: 15px;
+    }
+
+    .main_bottom_left_video_news {
+        width: 100%;
+        height: 260px;
+        border: 1px solid #F1F1F1;
+        border-top: 1px solid #225DCB;
+        border-bottom: 1px solid #ddd;
+        margin-bottom: 15px;
+    }
+
+    .main_bottom_left_rank {
+        width: 100%;
+        height: 480px;
+        border: 1px solid #F1F1F1;
+        border-top: 1px solid #225DCB;
+        border-bottom: 1px solid #ddd;
+        margin-bottom: 40px;
+    }
+
+    .main_bottom_right_content_box {
+        width: 660px;
+        min-width: 660px;
+        height: auto;
+        min-height: 1245.95px;
+    }
+
+    .main_bottom_right_content_box_up {
+        width: 660px;
+        min-width: 660px;
+        height: auto;
+        min-height: 787.95px;
+        margin-bottom: 35px;
+        display: flex;
+
+    }
+
+    .main_bottom_right_content_box_bottom {
+        width: 660px;
+        min-width: 660px;
+        height: auto;
+        min-height: 421px;
+        border: 1px solid blue;
+    }
+
+    .main_top_box_right_content_box_rank_head {
+        width: calc(100% - 5px);
+        height: auto;
+        padding-left: 5px;
+        font-size: 14px;
+        font-weight: 700;
+        font-family: 'Noto-B';
+        color: #39373A;
+        margin-bottom: 15px;
+    }
+
+    .main_top_box_right_content_box_rank_title {
+        width: 100%;
+        height: 25px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .main_top_box_right_content_box_rank {
+        font-size: 20px;
+        font-weight: 500;
+        color: #39373A;
+        margin-right: 5px;
+    }
+
+    .main_top_box_right_content_box_rank_content_link {
+        width: 100%;
+        height: 100%;
+        font-size: 12px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .main_top_box_right_content_box_rank_content_link:hover{
+        text-decoration: underline;
+    }
+
+    a.rank_link {
+        color: #39373A;
+        text-decoration: none;
+    }
+
+    a.rank_link:active {
+        color: #39373A;
+    }
+
+    a.rank_link:visited {
+        color: #39373A;
+    }
+
+    .main_top_box_left_content_area_top_area_img_box {
+        width: 160px;
+        height: calc(100% - 12px);
+        background-color: crimson;
+        overflow: hidden;
+    }
+
+    .main_top_box_left_content_area_top_area_img {
+        width: 100%;
+        height: auto;
+    }
+
+    .main_top_box_left_content_area_top_area_text_box {
+        width: 150px;
+        padding-left: 12px;
+        padding-bottom: 12px;
+        padding-top: 10px;
+        height: calc(100% - 34px);
+        overflow: hidden;
+    }
+
+    .main_top_box_left_content_area_top_area_text_content_box {
+        width: 150px;
+        height: 56px;
+        font-size: 15px;
+        line-height: 19px;
+        font-weight: bold;
+        letter-spacing: -1px;
+    }
+
+    .main_top_box_left_content_area_top_area_text_name_box {
+        width: 150px;
+        padding-top: 8px;
+        height: 16px;
+        font-size: 15px;
+        line-height: 19px;
+        font-weight: bold;
+        letter-spacing: -1px;
+    }
+
+    .main_top_box_left_content_area_top_area_img_box_link {
+        text-decoration: none;
+        color: black;
+    }
+
+    .main_top_box_left_content_area_top_area_img_box_link:hover {
+        text-decoration: underline;
+    }
+
+    .main_top_box_left_content_area_middle_area_img_box {
+        width: 110px;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    .main_top_box_left_content_area_middle_area_img {
+        width: 100%;
+        height: auto;
+    }
+
+    .main_top_box_left_content_area_middle_area_text_box {
+        padding-left: 12px;
+        padding-top: 5px;
+        width: 190px;
+        height: calc(100% - 10.5px);
+        font-size: 15px;
+        line-height: 19px;
+        font-weight: bold;
+        letter-spacing: -1px;
+    }
+
+    .main_top_box_left_content_area_middle_area_text_box_team {
+        margin-top: 5px;
+        font-size: 14px;
+        color: #94a2b5;
+        font-weight: 500;
+    }
+
+    .main_video_sort_list {
+        font-size: 14px;
+        font-weight: bold;
+        letter-spacing: -1px;
+        text-decoration: none;
+        margin-right: 20px;
+        color: #94a2b5;
+    }
+
+    .main_video_list {
+        width: 100%;
+        height: 170px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .main_video_thumnail {
+        width: 194.4px;
+        height: 100%;
+        margin-right: 9px;
+        overflow: hidden;
+    }
+
+    .main_video_thumnail_box {
+        width: 194.4px;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    .main_video_thumnail_img {
+        width: 194.4px;
+        height: auto;
+    }
+
+    .main_video_title_box {
+        width: 100%;
+        height: 58px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .main_video_title {
+        width: 186.4px;
+        height: 32px;
+        margin-right: 7px;
+        overflow: hidden;
+        padding-top: 10px;
+        padding-bottom: 14px;
+        padding-left: 4px;
+        padding-right: 4px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+        font-size: 15px;
+        font-weight: bold;
+        line-height: 17px;
+        letter-spacing: -0.5px;
+    }
+
+    .main_bottom_center_head_box {
+        width: 100%;
+        height: 46px;
+        display: flex;
+        border-bottom: 1px solid #F1F1F1;
+        margin-bottom: 20px;
+    }
+
+    .main_bottom_center_head {
+        width: calc(100% - 88px);
+        height: 46px;
+        margin: 0px;
+        padding-left: 9px;
+        padding-right: 9px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        font-size: 14px;
+        font-family: 'Noto-B';
+        font-weight: 700;
+    }
+
+    .main_bottom_center_head_all_news {
+        width: 70px;
+        height: 46px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        color: #888;
+        font-size: 11px;
+        font-family: "Helvetica Neue", "Apple SD Gothic Neo", "Malgun Gothic", "맑은 고딕", Dotum, "돋움", sans-serif;
+    }
+
+    .main_bottom_center_content_text {
+        width: 100%;
+        height: 25px;
+        padding-bottom: 1px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 24px;
+        letter-spacing: -1px;
+    }
+
+    .main_bottom_center_content_text_link {
+        text-decoration: none;
+        color: black;
+    }
+    .main_home_box_head{
+        width: calc(100% - 32px);
+        height: 47px;
+        padding-left: 16px;
+        padding-right: 16px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        color: #36c;
+        font-family: 'Noto-B';
+        font-weight: 500;
+    }
+    .main_best_video{
+        width: calc(100% - 32px);
+        padding-left: 16px;
+        padding-right: 16px;
+        height: calc(211px - 16px);
+        padding-bottom: 18px;
+    }
+    .main_best_video_box{
+        width: 100%;
+        height: 160px;
+        overflow: hidden;
+    }
+    .main_best_video_box_content{
+        width: 100%;
+        height: auto;
+    }
+    .main_best_video_box_text{
+        width: 100%;
+        height: 26px;
+        padding-top: 10px;
+        font-family: 'Noto-B';
+        font-weight: bold;
+        line-height: 17px;
+        letter-spacing: -1px;
+    }
+    #next_btn{
+        width: 200px;
+    }
+</style>
+<div class="main_area">
+    <div class="main_box">
+        <div class="main_top_area">
+            <div class="main_top_box">
+                <div class="main_top_box_left">
+                    <div class="main_top_box_left_content_area">
+                        <div class="main_top_box_left_content_area_top_area">
+                            <div class="main_top_box_left_content_area_top_area_img_box">
+                                <a class="main_top_box_left_content_area_top_area_img_box_link"
+                                    href="/board/news/<%=news[0].content_number%>">
+                                    <img class="main_top_box_left_content_area_top_area_img"
+                                        src="../../uploads/<%=news[0].img%>" alt="<%=news[0].title%>"
+                                        title="<%=news[0].title%>">
+                            </div>
+                            <div class="main_top_box_left_content_area_top_area_text_box" style="margin-right: 30px;">
+                                <div class="main_top_box_left_content_area_top_area_text_content_box">
+                                    <%=news[0].title%>
+                                </div>
+                                <div class="main_top_box_left_content_area_top_area_text_name_box">
+                                    <span
+                                        class="main_top_box_left_content_area_middle_area_text_box_team"><%=news[0].team%></span>
+                                </div>
+                                </a>
+                            </div>
+                            <div class="main_top_box_left_content_area_top_area_img_box">
+                                <a class="main_top_box_left_content_area_top_area_img_box_link"
+                                    href="/board/news/<%=news[1].content_number%>">
+                                    <img class="main_top_box_left_content_area_top_area_img"
+                                        src="../../uploads/<%=news[1].img%>" alt="<%=news[1].title%>"
+                                        title="<%=news[1].title%>">
+                            </div>
+                            <div class="main_top_box_left_content_area_top_area_text_box">
+                                <div class="main_top_box_left_content_area_top_area_text_content_box">
+                                    <%=news[1].title%>
+                                </div>
+                                <div class="main_top_box_left_content_area_top_area_text_name_box">
+                                    <span
+                                        class="main_top_box_left_content_area_middle_area_text_box_team"><%=news[1].team%></span>
+                                </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="main_top_box_left_content_area_middle_area">
+                            <div class="main_top_box_left_content_area_middle_area_img_box">
+                                <a class="main_top_box_left_content_area_top_area_img_box_link"
+                                    href="/board/news/<%=news[2].content_number%>">
+                                    <img class="main_top_box_left_content_area_middle_area_img"
+                                        src="../../uploads/<%=news[2].img%>">
+                            </div>
+                            <div class="main_top_box_left_content_area_middle_area_text_box"
+                                style="margin-right: 40px;">
+                                <% if (news[2].title.length > 30) {%>
+                                    <%=news[2].title.slice(0, 30)%>...
+                                <%} else {%>
+                                    <%=news[2].title.slice(0, 30)%>
+                                <%}%>
+                                <p class="main_top_box_left_content_area_middle_area_text_box_team"><%=news[2].team%>
+                                </p>
+                                </a>
+                            </div>
+                            <div class="main_top_box_left_content_area_middle_area_img_box">
+                                <a class="main_top_box_left_content_area_top_area_img_box_link"
+                                    href="/board/news/<%=news[3].content_number%>">
+                                    <img class="main_top_box_left_content_area_middle_area_img"
+                                        src="../../uploads/<%=news[3].img%>">
+                            </div>
+                            <div class="main_top_box_left_content_area_middle_area_text_box">
+                                <% if (news[3].title.length > 30) {%>
+                                    <%=news[3].title.slice(0, 30)%>...
+                                <%} else {%>
+                                    <%=news[3].title.slice(0, 30)%>
+                                <%}%>
+                                <p class="main_top_box_left_content_area_middle_area_text_box_team"><%=news[3].team%>
+                                </p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="main_top_box_left_content_area_bottom_area">
+                            <div class="main_top_box_left_content_area_middle_area_img_box">
+                                <a class="main_top_box_left_content_area_top_area_img_box_link"
+                                    href="/board/news/<%=news[4].content_number%>">
+                                    <img class="main_top_box_left_content_area_middle_area_img"
+                                        src="../../uploads/<%=news[4].img%>">
+                            </div>
+                            <div class="main_top_box_left_content_area_middle_area_text_box"
+                                style="margin-right: 40px;">
+                                <% if (news[4].title.length > 30) {%>
+                                    <%=news[4].title.slice(0, 30)%>...
+                                <%} else {%>
+                                    <%=news[4].title.slice(0, 30)%>
+                                <%}%>
+                                <p class="main_top_box_left_content_area_middle_area_text_box_team"><%=news[4].team%>
+                                </p>
+                                </a>
+                            </div>
+                            <div class="main_top_box_left_content_area_middle_area_img_box">
+                                <a class="main_top_box_left_content_area_top_area_img_box_link"
+                                    href="/board/news/<%=news[5].content_number%>">
+                                    <img class="main_top_box_left_content_area_middle_area_img"
+                                        src="../../uploads/<%=news[5].img%>">
+                            </div>
+                            <div class="main_top_box_left_content_area_middle_area_text_box">
+                                <% if (news[5].title.length > 30) {%>
+                                    <%=news[5].title.slice(0, 30)%>...
+                                <%} else {%>
+                                    <%=news[5].title.slice(0, 30)%>
+                                <%}%>
+                                <p class="main_top_box_left_content_area_middle_area_text_box_team"><%=news[5].team%>
+                                </p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="main_top_box_right">
+                    <div class="main_top_box_right_content_box">
+                        <div class="main_top_box_right_content_box_rank_head">
+                            이 시각 많이 본 뉴스
+                        </div>
+                        <% for (var b = 0; b < 10; b++){%>
+                        <div class="main_top_box_right_content_box_rank_title">
+                            <span class="main_top_box_right_content_box_rank"><%=b+1%></span>
+                            <a class="rank_link" href="http://localhost:3000/board/news/<%=news[b].content_number%>">
+                                <div class="main_top_box_right_content_box_rank_content_link">
+                                    <%=news[b].title.slice(0,25)%>...</div>
+                            </a>
+                        </div>
+                        <%}%>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="main_middle_area">
+    <div class="main_middle_box">
+        <div class="main_middle_box_video_nav">
+            <a class="main_video_sort_list" style="color: black;">기타</a>
+            <a class="main_video_sort_list">프리미어리그</a>
+            <a class="main_video_sort_list">라리가</a>
+            <a class="main_video_sort_list">분데스</a>
+            <a class="main_video_sort_list">세리에</a>
+            <a class="main_video_sort_list">UEFA</a>
+        </div>
+        <div class="main_middle_box_video_box">
+            <div class="main_video_list">
+                <%for (var a = 0; a < 5; a++){%>
+                <div class="main_video_thumnail">
+                    <div class="main_video_thumnail_box">
+                        <a class="rank_link" href="http://localhost:3000/board/video/<%=video[a].video_number%>">
+                            <img class="main_video_thumnail_img" src="../../uploads/<%=video[a].thumbnail%>" alt="">
+                            <div class="main_video_title">
+                                <%if (video[a].title.length > 35){%>
+                                    <%=video[a].title.slice(0, 35)%>...
+                                <%} else {%>
+                                    <%=video[a].title%>
+                                <%}%>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <%}%>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="main_bottom_area">
+    <div class="main_bottom_box">
+        <div class="main_bottom_left">
+            <div class="main_bottom_left_plan">
+                해외축구 경기 일정/결과
+            </div>
+            <div class="main_bottom_left_opinion">
+                <div class="main_home_box_head">
+                    BEST VIDEO
+                    <button id="next_btn"><%=best_video[0].title.slice(0,20)%></button>
+                    <script>
+                        $(document).ready(function(){
+                        $("#next_btn").on("click", function(){
+                            var get = 'GET METHOD CALL';
+                             //Ajax GET Method TEST
+                             alert("ㅎㅇ");
+                         });
+                        });
+                        </script>
+
+                </div>
+                <div class="main_best_video">
+                    <div class="main_best_video_box">
+                        <a class="rank_link" href="http://localhost:3000/board/video/<%=best_video[0].video_number%>">
+                            <img class="main_best_video_box_content" src="../../uploads/<%=best_video[0].thumbnail%>" alt="">
+                    </div>
+                    <div class="main_best_video_box_text">
+                        <%=video[1].title%>
+                    </div>
+                        </a>
+                </div>
+            </div>
+            <div class="main_bottom_left_video_news">
+                유럽 구단이 직접 전하는 영상 소식
+            </div>
+            <div class="main_bottom_left_rank">
+                해외축구 순위표
+            </div>
+        </div>
+        <div class="main_bottom_right_content_box">
+            <div class="main_bottom_right_content_box_up">
+                <div class="main_bottom_center">
+                    <div class="main_bottom_center_head_box">
+                    <h2 class="main_bottom_center_head">추천뉴스</h2>
+                    <span class="main_bottom_center_head_all_news">전체뉴스보기</span>
+                    </div>
+                    <% for (var i = 10; i < 34; i++ ) {%>
+                        <% if (i % 5 == 4) {%>
+                    <a class="main_bottom_center_content_text_link" href="/board/news/<%=news[i].content_number%>">
+                        <div class="main_bottom_center_content_text" style="margin-bottom: 20px;">
+                            <% if (news[i].title.length > 27) {%>
+                                <%=news[i].title.slice(0,27)%>...
+                            <%} else {%>
+                                <%=news[i].title%>
+                            <%}%>
+                        </div>
+                    </a>
+                        <%} else {%>
+                            <a class="main_bottom_center_content_text_link" href="/board/news/<%=news[i].content_number%>">
+                                <div class="main_bottom_center_content_text">
+                                    <% if (news[i].title.length > 27) {%>
+                                        <%=news[i].title.slice(0,27)%>...
+                                    <%} else {%>
+                                        <%=news[i].title%>
+                                    <%}%>
+                            </div>
+                        </a>
+                        <%}%>
+                    <%}%>
+                </div>
+                <div class="main_bottom_right">
+
+                </div>
+            </div>
+            <div class="main_bottom_right_content_box_bottom">
+
+            </div>
+        </div>
+    </div>
+</div>

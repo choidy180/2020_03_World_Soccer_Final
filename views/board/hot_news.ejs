@@ -1,0 +1,299 @@
+<style>
+    .hot_news_area{
+        margin-top: 35px;
+        width: 100%;
+        height: auto;
+        min-width: 1000px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 100px;
+    }
+    .hot_news_box{
+        width: 1000px;
+        height: auto;
+        min-height: 300px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    .hot_news_left{
+        width: 700px;
+        height: auto;
+        min-height: 300px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    .hot_news_right{
+        width: 300px;
+        height: auto;
+        min-height: 300px;
+        border: 0.1px solid greenyellow;
+    }
+    .hot_news_left_box{
+        width: 660px;
+        height: auto;
+        min-height: 300px;     
+    }
+    .hot_news_head_box{
+        width: 100%;
+        height: 75px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .hot_news_head_text_1st{
+        font-size: 16px;
+        font-weight: bold;
+        text-decoration: none;
+        color: #777;
+        padding-right: 10px;
+        border-right: 1px solid #E3E3E3;
+    }
+    .hot_news_head_text{
+        font-size: 16px;
+        font-weight: bold;
+        text-decoration: none;
+        color: #777;
+        padding-left: 10px;
+        padding-right: 10px;
+        border-right: 1px solid #E3E3E3;
+    }
+    .hot_news_head_text_end{
+        font-size: 16px;
+        font-weight: bold;
+        text-decoration: none;
+        color: #777;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .hot_news_sort_box{
+        width: 100%;
+        height: 53px;
+        border-top: 1px solid #666;
+        border-bottom: 1px solid #d7d7d7;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .hot_news_sort{
+        color: #595959;
+        font-family: "나눔고딕",nanum gothic,sans-serif;
+        font-size: 13px;
+        font-weight: bold;
+        text-decoration: none;
+        margin-right: 12px;
+        margin-left: 12px;
+    }
+    .hot_news_content_box{
+        width: 100%;
+        height: auto;
+        min-height: 94px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        border-bottom: 1px solid #f2f2f2;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .hot_news_content_img_box{
+        width: 140px;
+        height: 100%;
+        overflow: hidden;
+    }
+    .hot_news_content_img_{
+        width: 100%;
+        height: auto;
+    }
+    .hot_news_content_text_box{
+        width: 520px;
+        height: 100%;
+        min-height: 104px;
+    }
+    .hot_news_content_text{
+        width: 100%;
+        font-size: 14px;
+        font-weight: bold;
+        letter-spacing: -1px;
+        text-decoration: none;
+        color: black;
+        padding-left: 20px;
+    }
+    .hot_news_content_text_content{
+        margin: 0px;
+        padding-left: 20px;
+        margin-top: 5px;
+        margin-bottom: 20px;
+        font-family: 'Noto-B';
+        font-size: 13px;
+    }
+    .hot_news_content_team{
+        font-family: 'Noto-B';
+        font-size: 13px;
+        color: #578ce1;
+        padding-left: 20px;
+        margin-right: 20px;
+        padding-right: 10px;
+        border-right: 1px solid #E3E3E3;
+    }
+    .hot_news_content_uplaod{
+        margin-left: -5px;
+        color: #999;
+        font-family: "돋움",Dotum,Helvetica,sans-serif;
+        font-size: 11px;        
+    }
+    .hot_news_content_box_link{
+        text-decoration: none;
+    }
+</style>
+<div class="hot_news_area">
+    <div class="hot_news_box">
+        <div class="hot_news_left">
+            <div class="hot_news_left_box">
+                <div class="hot_news_head_box">
+                    <a class="hot_news_head_text_1st" href="">해외축구 전체</a>
+                    <a class="hot_news_head_text" href="">프리미어리그</a>
+                    <a class="hot_news_head_text" href="">라리가</a>
+                    <a class="hot_news_head_text" href="">분데스</a>
+                    <a class="hot_news_head_text" href="">세리에</a>
+                    <a class="hot_news_head_text_end" href="">UEFA</a>
+                </div>
+                <div class="hot_news_sort_box">
+                    <a class="hot_news_sort" href="" style="margin-left: 0px;">최신순</a>
+                    <a class="hot_news_sort" href="">인기순</a>
+                    <a class="hot_news_sort" href="">댓글순</a>
+                </div>
+                <div class="hot_news_content_box">
+                    <div class="hot_news_content_img_box">
+                        <a class="hot_news_content_box_link" href="/board/news/<%=row[0].content_number%>">
+                        <img class="hot_news_content_img_" src="../../uploads/<%=row[0].img%>" alt="">
+                    </div>
+                    <div class="hot_news_content_text_box">
+                        <span class="hot_news_content_text"><%=row[0].title%></span>
+                        </a>
+                        <p class="hot_news_content_text_content"><%=row[0].content.slice(0,95)%>...</p>
+                        <span class="hot_news_content_team"><%=row[0].team%></span><span class="hot_news_content_uplaod"><%=row[0].upload_time%></span>
+                    </div>
+                </div>
+                <div class="hot_news_content_box">
+                    <div class="hot_news_content_img_box">
+                        <a class="hot_news_content_box_link" href="/board/news/<%=row[1].content_number%>">
+                        <img class="hot_news_content_img_" src="../../uploads/<%=row[1].img%>" alt="">
+                    </div>
+                    <div class="hot_news_content_text_box">
+                        <span class="hot_news_content_text"><%=row[1].title%></span>
+                        </a>
+                        <p class="hot_news_content_text_content"><%=row[1].content.slice(0,95)%>...</p>
+                        <span class="hot_news_content_team"><%=row[1].team%></span><span class="hot_news_content_uplaod"><%=row[1].upload_time%></span>
+                    </div>
+                </div>
+                <div class="hot_news_content_box">
+                    <div class="hot_news_content_img_box">
+                        <a class="hot_news_content_box_link" href="/board/news/<%=row[2].content_number%>">
+                        <img class="hot_news_content_img_" src="../../uploads/<%=row[2].img%>" alt="">
+                    </div>
+                    <div class="hot_news_content_text_box">
+                        <span class="hot_news_content_text"><%=row[2].title%></span>
+                        </a>
+                        <p class="hot_news_content_text_content"><%=row[2].content.slice(0,95)%>...</p>
+                        <span class="hot_news_content_team"><%=row[2].team%></span><span class="hot_news_content_uplaod"><%=row[2].upload_time%></span>
+                    </div>
+                </div>
+                <div class="hot_news_content_box">
+                    <div class="hot_news_content_img_box">
+                        <a class="hot_news_content_box_link" href="/board/news/<%=row[3].content_number%>">
+                        <img class="hot_news_content_img_" src="../../uploads/<%=row[3].img%>" alt="">
+                    </div>
+                    <div class="hot_news_content_text_box">
+                        <span class="hot_news_content_text"><%=row[3].title%></span>
+                        </a>
+                        <p class="hot_news_content_text_content"><%=row[3].content.slice(0,95)%>...</p>
+                        <span class="hot_news_content_team"><%=row[3].team%></span><span class="hot_news_content_uplaod"><%=row[3].upload_time%></span>
+                    </div>
+                </div>
+                <div class="hot_news_content_box">
+                    <div class="hot_news_content_img_box">
+                        <a class="hot_news_content_box_link" href="/board/news/<%=row[4].content_number%>">
+                        <img class="hot_news_content_img_" src="../../uploads/<%=row[4].img%>" alt="">
+                    </div>
+                    <div class="hot_news_content_text_box">
+                        <span class="hot_news_content_text"><%=row[4].title%></span>
+                        </a>
+                        <p class="hot_news_content_text_content"><%=row[4].content.slice(0,95)%>...</p>
+                        <span class="hot_news_content_team"><%=row[4].team%></span><span class="hot_news_content_uplaod"><%=row[4].upload_time%></span>
+                    </div>
+                </div>
+                <div class="hot_news_content_box">
+                    <div class="hot_news_content_img_box">
+                        <a class="hot_news_content_box_link" href="/board/news/<%=row[5].content_number%>">
+                        <img class="hot_news_content_img_" src="../../uploads/<%=row[5].img%>" alt="">
+                    </div>
+                    <div class="hot_news_content_text_box">
+                        <span class="hot_news_content_text"><%=row[5].title%></span>
+                        </a>
+                        <p class="hot_news_content_text_content"><%=row[5].content.slice(0,95)%>...</p>
+                        <span class="hot_news_content_team"><%=row[5].team%></span><span class="hot_news_content_uplaod"><%=row[5].upload_time%></span>
+                    </div>
+                </div>
+                <div class="hot_news_content_box">
+                    <div class="hot_news_content_img_box">
+                        <a class="hot_news_content_box_link" href="/board/news/<%=row[6].content_number%>">
+                        <img class="hot_news_content_img_" src="../../uploads/<%=row[6].img%>" alt="">
+                    </div>
+                    <div class="hot_news_content_text_box">
+                        <span class="hot_news_content_text"><%=row[6].title%></span>
+                        </a>
+                        <p class="hot_news_content_text_content"><%=row[6].content.slice(0,95)%>...</p>
+                        <span class="hot_news_content_team"><%=row[6].team%></span><span class="hot_news_content_uplaod"><%=row[6].upload_time%></span>
+                    </div>
+                </div>
+                <div class="hot_news_content_box">
+                    <div class="hot_news_content_img_box">
+                        <a class="hot_news_content_box_link" href="/board/news/<%=row[7].content_number%>">
+                        <img class="hot_news_content_img_" src="../../uploads/<%=row[7].img%>" alt="">
+                    </div>
+                    <div class="hot_news_content_text_box">
+                        <span class="hot_news_content_text"><%=row[7].title%></span>
+                        </a>
+                        <p class="hot_news_content_text_content"><%=row[7].content.slice(0,95)%>...</p>
+                        <span class="hot_news_content_team"><%=row[7].team%></span><span class="hot_news_content_uplaod"><%=row[7].upload_time%></span>
+                    </div>
+                </div>
+                <div class="hot_news_content_box">
+                    <div class="hot_news_content_img_box">
+                        <a class="hot_news_content_box_link" href="/board/news/<%=row[8].content_number%>">
+                        <img class="hot_news_content_img_" src="../../uploads/<%=row[8].img%>" alt="">
+                    </div>
+                    <div class="hot_news_content_text_box">
+                        <span class="hot_news_content_text"><%=row[8].title%></span>
+                        </a>
+                        <p class="hot_news_content_text_content"><%=row[8].content.slice(0,95)%>...</p>
+                        <span class="hot_news_content_team"><%=row[8].team%></span><span class="hot_news_content_uplaod"><%=row[8].upload_time%></span>
+                    </div>
+                </div>
+                <div class="hot_news_content_box">
+                    <div class="hot_news_content_img_box">
+                        <a class="hot_news_content_box_link" href="/board/news/<%=row[9].content_number%>">
+                        <img class="hot_news_content_img_" src="../../uploads/<%=row[9].img%>" alt="">
+                    </div>
+                    <div class="hot_news_content_text_box">
+                        <span class="hot_news_content_text"><%=row[9].title%></span>
+                        </a>
+                        <p class="hot_news_content_text_content"><%=row[9].content.slice(0,95)%>...</p>
+                        <span class="hot_news_content_team"><%=row[9].team%></span><span class="hot_news_content_uplaod"><%=row[9].upload_time%></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hot_news_right">
+
+        </div>
+    </div>
+</div>

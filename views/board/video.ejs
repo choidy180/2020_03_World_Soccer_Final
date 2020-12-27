@@ -1,0 +1,322 @@
+<style>
+    .video_area{
+        margin-top: 35px;
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    .video_box{
+        width: 1000px;
+        min-width: 1000px;
+        height: auto;
+        min-height: 300px;
+        display: flex;
+    }
+    .video_box_left{
+        width: 700px;
+        min-width: 700px;
+        height: auto;
+        min-height: 300px;
+        border-top: 0px;
+    }
+    .video_box_right{
+        width: 260px;
+        min-width: 300px;
+        height: auto;
+        min-height: 1800px;
+        border: 1px solid #e8e8e8;
+        padding-top: 30px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .news_box_right {
+        width: 260px;
+        min-width: 300px;
+        height: auto;
+        min-height: 1800px;
+        border: 1px solid #e8e8e8;
+        padding-top: 30px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .video_content_box{
+        width: 660px;
+        height: 395px;
+    }
+    .video_content_info_box{
+        width: 644px;
+        height: auto;
+        min-height: 100px;
+        margin-right: 40px;
+        padding-left: 8px;
+        padding-right: 8px;
+        padding-top: 24px;
+        padding-bottom: 26px;
+        border-bottom: 0.8px solid #E8E8E8;
+    }
+    .video_content_info_title{
+        width: 100%;
+        height: 16px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-end;
+    }
+    .video_content_info_title_league{
+        color: black;
+        font-weight: bold;
+        font-size: 14px;
+    }
+    .video_content_info_title_team{
+        color: #767676;
+        font-weight: bold;
+        font-size: 14px;
+    }
+    .video_content_info_title_date{
+        color: #6d6d6d;
+        font-size: 14px;
+        font-weight: 500;
+    }
+    .video_content_info_title_title{
+        margin: 0px;
+        font-size: 25px;
+        margin-bottom: 20px;
+    }
+    .video_content_info_title_left_box{
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-end;
+    }
+    .video_content_info_title_right_box{
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: flex-end;
+    }
+    .video_content_info_title_addition{
+        width: 100%;
+        height: 35px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: flex-end;
+        font-size: 30px;
+        margin-bottom: 30px;
+    }
+    .video_content_info_title_left_content_box{
+        width: 100%;
+        height: auto;
+        min-height: 300px;
+        border-top: 1px solid #E8E8E8;
+        padding-top: 20px;
+        white-space: pre-line;
+        font-size: 20px;
+    }
+    .news_box_more {
+        color: #999;
+        font-family: 'Noto-B';
+        font-size: 14px;
+        text-decoration: none;
+    }
+
+    .right_more_news_box {
+        width: 100%;
+        height: auto;
+        min-height: 100px;
+        margin-top: 30px;
+        border-bottom: 1px solid #EFF2F8;
+        padding-bottom: 30px;
+        margin-bottom: 30px;
+    }
+
+    .right_more_news_content {
+        width: 100%;
+        height: 20px;
+        margin-bottom: 5px;
+        font-size: 14px;
+        text-decoration: none;
+    }
+
+    .right_more_news_content_text {
+        text-decoration: none;
+        color: black;
+    }
+
+    .best_video_top_img_box {
+        margin-top: 10px;
+        width: 100%;
+        height: 156px;
+        overflow: hidden;
+        margin-bottom: -156px;
+    }
+
+    .best_video_top_img {
+        width: 100%;
+        height: auto;
+    }
+
+    .best_video_top_text_box {
+        width: calc(100%-10px);
+        padding-left: 10px;
+        height: 151px;
+        padding-top: 5px;
+        color: white;
+        margin-bottom: 10px;
+    }
+
+    .best_video_top_text_box_number {
+        width: 100%;
+        margin-bottom: 95px;
+        font-size: 20px;
+    }
+
+    .best_video_top_box_link {
+        text-decoration: none;
+        color: white;
+    }
+
+    .best_video_top_box_link:hover {
+        text-decoration: underline;
+    }
+
+    .best_video_top_text_box_title {
+        margin-bottom: 10px;
+    }
+
+    .best_video_content_box {
+        width: 100%;
+        height: 64px;
+        margin-bottom: 10px;
+        text-decoration: none;
+        color: black;
+    }
+    .news_box_right_head_text {
+        color: black;
+        font-family: 'Noto-B';
+        font-size: 16px;
+        font-weight: 700;
+        margin-right: 90px;
+    }
+
+    .best_video_content_box {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .best_video_content_img_box {
+        width: 115px;
+        height: 100%;
+        overflow: hidden;
+        margin-right: 10px;
+    }
+
+    .best_video_content_img {
+        width: 100%;
+        height: auto;
+    }
+
+    .best_video_content_text_box {
+        width: 175px;
+        height: 34px;
+        margin-top: -27px;
+    }
+    .link_non{
+        text-decoration: none;
+    }
+    .link_non:hover{
+        text-decoration: underline;
+    }
+</style>
+<div class="video_area">
+    <div class="video_box">
+        <div class="video_box_left">
+            <div class="video_content_box">
+                <iframe width="660" height="372" src="<%=row[0].video%>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="video_content_info_box">
+                <div class="video_content_info_title">
+                    <span class="video_content_info_title_league"><%=row[0].league%> | &nbsp;</span>
+                    <span class="video_content_info_title_team"><%=row[0].team%> &nbsp;</span>
+                    <span class="video_content_info_title_date"><%=row[0].upload_time%> &nbsp;</span>
+                </div>
+                <h1 class="video_content_info_title_title"><%=row[0].title%></h1>
+                <div class="video_content_info_title_addition">
+                    <div class="video_content_info_title_left_box">
+                        ▷ <%=row[0].hit%>
+                    </div>
+                    <div class="video_content_info_title_right_box">
+                    </div>
+                </div>
+                <div class="video_content_info_title_left_content_box">
+                    <%=row[0].content%>
+                </div>
+            </div>
+        </div>
+        <div class="news_box_right">
+            <span class="news_box_right_head_text">이 시각 많이 본 뉴스</span>
+            <a class="news_box_more" href="/board/hot_news">더 보기 ></a>
+            <div class="right_more_news_box">
+                <% for (var i = 0; i < 10; i++){%>
+                <% if (best_news[i].title.length > 25) {%>
+                <div class="right_more_news_content">
+                    <a class="right_more_news_content_text" href="/board/news/<%=best_news[i].content_number%>"><%= best_news[i].title.slice(0,25)%>...</a>
+                </div>
+                <%} else {%>
+                <div class="right_more_news_content">
+                    <a class="right_more_news_content_text" href="/board/news/<%=best_news[i].content_number%>"><%= best_news[i].title.slice(0,25)%></a>
+                </div>
+                <%}%>
+                <%}%>
+            </div>
+            <span class="news_box_right_head_text" style="margin-right: 145px;">많이 본 영상</span>
+            <a class="news_box_more" href="/board/hot_news">더 보기 ></a>
+            <a class="best_video_top_box_link" href=" /board/video/<%=best_video[0].video_number%>">
+                <div class="best_video_top_img_box">
+                    <img class="best_video_top_img" src="../../uploads/<%=best_video[0].thumbnail%>" alt="">
+                </div>
+                <div class="best_video_top_text_box">
+                    <div class="best_video_top_text_box_number">
+                    </div>
+                    <div class="best_video_top_text_box_title">
+                        <% if(best_video[0].title.length > 25) {%>
+                        <span><%=best_video[0].title.slice(0,30)%>...</span>
+                        <%} else {%>
+                        <span><%=best_video[0].title%>...</span>
+                        <%}%>
+                    </div>
+                    ▷ <%=best_video[0].hit%>
+                    </div>
+            </a>
+            <% for (var j = 1; j < 5 ; j++){%>
+            <a class="link_non" href="/board/video/<%=best_video[j].video_number%>">
+            <div class="best_video_content_box">
+                <div class="best_video_content_img_box">
+                    <img class="best_video_content_img" src="../../uploads/<%=best_video[j].thumbnail%>">
+                </div>
+                <div class="best_video_content_text_box">
+                    <div class="best_video_content_text_head">
+                        <%=best_video[j].title.slice(0,25)%>...
+                    </div>
+                    <div>
+                        ▷ <%=best_video[j].hit%>
+                    </div>
+                </div>
+            </div>
+            </a>
+            <%}%>
+            <div class="best_video_top_text_box_text">
+
+            </div>
+        </div>
+    </div>
+</div>

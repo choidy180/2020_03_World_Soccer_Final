@@ -1,0 +1,299 @@
+<style>
+    .main_area {
+        margin-top: 14px;
+        width: 100%;
+        min-width: 965px;
+        height: auto;
+        min-height: 500px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .main_box {
+        width: 965px;
+        min-width: 965px;
+        height: auto;
+        min-height: 500px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .sign_up_box {
+        margin-top: 35px;
+        width: 570px;
+        height: auto;
+        min-height: 500px;
+    }
+
+    .sign_up_logo_box {
+        margin-top: 20px;
+        width: 100%;
+        height: 100px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 50px;
+        border-bottom: solid 2px #39373a;
+        padding-bottom: 50px;
+    }
+
+    .sign_up_logo_text {
+        color: #39373A;
+        text-decoration: none;
+        font-family: 'Noto-B';
+        font-size: 80px;
+    }
+
+    .sign_up_title_linebox {
+        display: flex;
+    }
+
+    .sign_up_title_box {
+        width: 150px;
+        height: 100%;
+    }
+
+    .sign_up_title {
+        width: 200px;
+        height: 53px;
+        text-align: left;
+        font-size: 16px;
+        font-weight: 700;
+        margin-bottom: 15px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        font-family: 'Noto-B';
+    }
+
+    .sign_up_input {
+        width: calc(100% - 10px);
+        height: 50px;
+        font-size: 16px;
+        padding-left: 10px;
+        margin-bottom: 20px;
+        border: none;
+        border-bottom: 1px solid #9D9D9D;
+    }
+
+    .sign_up_input::placeholder {
+        color: #464646;
+    }
+
+    .sign_up_input:focus {
+        outline: none;
+    }
+
+    .sign_up_input_birth_box {
+        width: calc(100% + 6px);
+        height: 50px;
+        display: flex;
+        margin-bottom: 30px;
+    }
+
+    .sign_up_input_birth {
+        width: calc(30% - 10px);
+        height: 49px;
+        border: none;
+        border-bottom: 1px solid #9D9D9D;
+        font-size: 16px;
+        margin-right: 5%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding-left: 10px;
+    }
+
+    .sign_up_input_birth:focus {
+        outline: none;
+    }
+
+    .sign_up_input_birth_last {
+        width: calc(30% - 10px);
+        height: 46px;
+        border: none;
+        border-bottom: 1px solid #9D9D9D;
+        font-size: 16px;
+        padding-left: 10px;
+    }
+
+    .sign_up_input_birth_last:focus {
+        outline: none;
+    }
+
+    .sign_up_input_birth::placeholder {
+        font-size: 16px;
+        color: #464646;
+    }
+
+    .sign_up_input_birth_last::placeholder {
+        font-size: 16px;
+        color: #464646;
+    }
+
+    .sign_up_input_sex_select {
+        width: calc(100% + 6px);
+        height: 50px;
+        font-size: 20px;
+        border: none;
+        border-bottom: 1px solid #9D9D9D;
+        padding-left: 10px;
+        margin-bottom: 30px;
+    }
+
+    .sign_up_input_sex_select_text {
+        font-size: 20px;
+    }
+
+    .sign_up_button_box {
+        margin-top: 40px;
+        width: 100%;
+        height: 150px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        border-top: solid 2px #39373a;
+    }
+
+    .sign_up_button {
+        width: calc(150px);
+        height: 60px;
+        background-color: #39373A;
+        border: none;
+        margin-bottom: 30px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-size: 18px;
+        font-weight: 700;
+        font-family: 'Noto-M';
+        border-radius: 6px;
+        outline: none;
+    }
+
+    .sign_up_button:hover::after {
+        border: none;
+        outline: none;
+    }
+
+    .sign_up_button_right {
+        width: calc(150px);
+        height: 60px;
+        background-color: #39373A;
+        border: 1px solid #39373A;
+        margin-bottom: 30px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-size: 18px;
+        font-weight: 700;
+        font-family: 'Noto-M';
+        border-radius: 6px;
+        outline: none;
+    }
+
+    .sign_up_button_a {
+        text-decoration: none;
+    }
+</style>
+<div class="main_area">
+    <div class="main_box">
+        <div class="sign_up_box">
+            <div class="sign_up_logo_box">
+                <a class="sign_up_logo_text" href="/">D.NET</a>
+            </div>
+            <form method="POST" action="/users/join">
+                <div class="sign_up_title_linebox">
+                    <div class="sign_up_title">
+                        아이디
+                    </div>
+                    <input class="sign_up_input" name="id" type="text" placeholder="4-20자: 영문 소문자,숫자조합">
+                </div>
+                <div class="sign_up_title_linebox">
+                    <div class="sign_up_title">
+                        비밀번호
+                    </div>
+                    <input class="sign_up_input" name="passwd" type="text" placeholder="4-20자: 영문 소문자,숫자조합">
+                </div>
+                <div class="sign_up_title_linebox">
+                    <div class="sign_up_title">
+                        비밀번호 재확인
+                    </div>
+                    <input class="sign_up_input" name="passwd2" type="text" placeholder="4-20자: 영문 소문자,숫자조합">
+                </div>
+                <div class="sign_up_title_linebox">
+                    <div class="sign_up_title">
+                        이름
+                    </div>
+                    <input class="sign_up_input" name="name" type="text">
+                </div>
+                <div class="sign_up_title_linebox">
+                    <div class="sign_up_title">
+                        생년월일
+                    </div>
+                    <div class="sign_up_input_birth_box">
+                        <input class="sign_up_input_birth" name="year" type="text" placeholder="년(4자)" style="height: 46px; width: 115px;">
+                        <select name="month" class="sign_up_input_birth" style="width: 127px;">
+                            <option value=""></option>
+                            <% for (var i = 1; i < 13; i++){%>
+                                <% if( i < 10) {%>
+                                    <option value="0<%=i%>">0<%=i%></option>
+                                <%} else {%>
+                                    <option value="<%=i%>"><%=i%></option>
+                                <%}%>
+                            <%}%>
+                        </select>
+                        <select name="day" class="sign_up_input_birth" style="margin: 0px; width: 127px;" >
+                            <option value=""></option>
+                            <% for (var i = 1; i < 32; i++){%>
+                                <% if( i < 10) {%>
+                                    <option value="0<%=i%>">0<%=i%></option>
+                                <%} else {%>
+                                    <option value="<%=i%>"><%=i%></option>
+                                <%}%>
+                            <%}%>
+                        </select>
+                    </div>
+                </div>
+                <div class="sign_up_title_linebox">
+                    <div class="sign_up_title">
+                        본인확인 이메일
+                    </div>
+                    <input class="sign_up_input" name="email" type="text">
+                </div>
+                <div class="sign_up_title_linebox">
+                    <div class="sign_up_title">
+                        휴대전화
+                    </div>
+                    <div class="sign_up_input_birth_box">
+                        <select name="tel_1st" class="sign_up_input_birth" style="width: 125px;">
+                            <option value="010">010</option>
+                            <option value="011">011</option>
+                            <option value="016">016</option>
+                            <option value="017">017</option>
+                        </select>
+                        <input class="sign_up_input_birth" name="tel_2nd" type="text"  style="height: 46px;">
+                        <input class="sign_up_input_birth_last" name="tel_3rd" type="text">
+                    </div>
+                </div>
+                <div class="sign_up_button_box">
+                    <a class="sign_up_button_a"><button class="sign_up_button"
+                            style="margin-right: 8px;">가입</button></a>
+            </form>
+            <a class="sign_up_button_a" href="/"><button class="sign_up_button_right">취소</button></a>
+        </div>
+    </div>
+</div>
+</div>
